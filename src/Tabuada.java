@@ -4,16 +4,16 @@ public class Tabuada {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int Numero;
+        int numero;
 
         while(true) {
             System.out.println("\nNúmero:");
-            Numero = scan.nextInt();
+            numero = scan.nextInt();
 
-            System.out.println("Tabuada de " + Numero + ":");
+            System.out.println("Tabuada de " + numero + ":");
 
             for (int i = 0; i <= 10; i = i + 1) {
-                System.out.println(Numero + " X " + i + " = " + (Numero * i));
+                System.out.println(numero + " X " + i + " = " + (numero * i));
             }
         }
     }

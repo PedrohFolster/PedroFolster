@@ -5,17 +5,17 @@ public class NameAndYears {
 
         Scanner scan = new Scanner(System.in);
 
-        int Idade;
-        String Name;
+        int idade;
+        String name;
 
         while(true) {
             System.out.println("\nNome: ");
-            Name = scan.next();
+            name = scan.next();
 
             System.out.println("\nIdade: ");
-            Idade = scan.nextInt();
+            idade = scan.nextInt();
 
-            System.out.println("\nO nome definido foi: " + Name + "\nSua idade é: " + Idade + "\n");
+            System.out.println("\nO nome definido foi: " + name + "\nSua idade é: " + idade + "\n");
         }
     }
 }
