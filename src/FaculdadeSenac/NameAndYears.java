@@ -10,14 +10,13 @@ public class NameAndYears {
         int idade;
         String name;
 
-        while(true) {
             System.out.println("\nNome: ");
             name = scan.nextLine();
 
             System.out.println("\nIdade: ");
             idade = scan.nextInt();
 
-            System.out.println("\nO nome definido foi: " + name + "\nSua idade é: " + idade + "\n");
-        }
+            System.out.println("\nNome: " + name + "." + "\nIdade: " + idade + " anos.");
+
     }
 }
