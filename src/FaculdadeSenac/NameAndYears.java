@@ -12,7 +12,7 @@ public class NameAndYears {
 
         while(true) {
             System.out.println("\nNome: ");
-            name = scan.next();
+            name = scan.nextLine();
 
             System.out.println("\nIdade: ");
             idade = scan.nextInt();
