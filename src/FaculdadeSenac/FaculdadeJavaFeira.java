@@ -1,3 +1,5 @@
+package FaculdadeSenac;
+
 public class FaculdadeJavaFeira {
     public static void main(String[] args) {
 

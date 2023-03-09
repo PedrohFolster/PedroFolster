@@ -1,3 +1,5 @@
+package FaculdadeSenac;
+
 import java.util.Scanner;
 
 public class Tabuada {
