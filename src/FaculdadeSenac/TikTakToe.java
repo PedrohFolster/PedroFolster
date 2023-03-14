@@ -26,13 +26,10 @@ public class TikTakToe {
         System.out.println("4 5 6");
         System.out.println("7 8 9");
 
-        System.out.println(player1 + ", escolha a linha para marcar um " + symbolPlayer1 + ".");
-        System.out.println("Line 1, 2, 3");
+        System.out.println(player1 + ", enter a number from 1 to 9 to mark an " + symbolPlayer1 + ".");
         symbolPlayer1 = scan.nextLine();
 
-
-        System.out.println(player1 + ", ecolha a coluna para marcar um " + symbolPlayer1 + ".");
-        System.out.println("Colum 1, 4, 7");
+        System.out.println(player2 + ", enter a number from 1 to 9 to mark an " + symbolPlayer2 + ".");
         symbolPlayer1 = scan.nextLine();
 
     }
