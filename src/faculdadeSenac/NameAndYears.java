@@ -1,4 +1,4 @@
-package FaculdadeSenac;
+package faculdadeSenac;
 
 import java.util.Scanner;
 

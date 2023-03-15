@@ -1,4 +1,4 @@
-package FaculdadeSenac;
+package faculdadeSenac;
 
 public class FaculdadeJavaFeira {
     public static void main(String[] args) {
