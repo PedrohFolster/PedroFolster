@@ -1,6 +1,7 @@
 package faculdadeSenac;
 
 public class FaculdadeJavaFeira {
+
     public static void main(String[] args) {
 
         double maca = 7.25;

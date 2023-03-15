@@ -3,6 +3,7 @@ package faculdadeSenac;
 import java.util.Scanner;
 
 public class NameAndYears {
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
