@@ -7,11 +7,11 @@ public class Saudacao {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        String name;
+        String message;
 
-        System.out.println("Enter your name: ");
-        name = scan.nextLine();
-        System.out.print("\nYour name is: " + name);
+        System.out.println("Enter your message: ");
+        message = scan.nextLine();
 
+        System.out.print("Your message is: " + message);
     }
 }
