@@ -32,7 +32,7 @@ public class Days {
         month = month * 30;
         int finaldate = day + month + year;
 
-        System.out.println(finaldate + "Days!");
+        System.out.println(finaldate + " Days!");
         System.out.println(date);
 
 
