@@ -3,23 +3,23 @@ package exercicios;
 import java.util.Scanner;
 
 public class Exercicio9 {
-
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner scan = new Scanner(System.in);
+        System.out.print("Digite o modelo do carro: ");
+        String modelo = sc.nextLine();
 
-        int valorDeCarrosVendidos;
-        int valorTotalDeVendas;
-        double salarioFixo;
-        double valorPorCarroVendido;
+        System.out.print("Digite o custo de fábrica do carro: ");
+        double custoFabrica = sc.nextDouble();
 
-        System.out.println("Quantos carros você vendeu?");
-        valorDeCarrosVendidos = scan.nextInt();
+        double percentualDistribuidor = 0.28;
+        double percentualImpostos = 0.45;
 
-        System.out.println("Qual foi o seu valor total de vendas?");
-        valorTotalDeVendas = scan.nextInt();
+        double custoFinal = custoFabrica + (custoFabrica * percentualDistribuidor) + (custoFabrica * percentualImpostos);
 
-        System.out.print("Qual valor do seu salário fixo: ");
-        salarioFixo = scan.nextDouble();
+        System.out.println("O modelo do carro é: " + modelo);
+        System.out.println("O custo final do carro para o consumidor é: " + custoFinal);
+
+        sc.close();
     }
 }
