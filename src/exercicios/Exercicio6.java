@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Exercicio6 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite a idade em anos: ");
-        int anos = input.nextInt();
+        int anos = scan.nextInt();
 
         System.out.print("Digite a idade em meses: ");
-        int meses = input.nextInt();
+        int meses = scan.nextInt();
 
         System.out.print("Digite a idade em dias: ");
-        int dias = input.nextInt();
+        int dias = scan.nextInt();
 
         int idadeEmDias = anos * 365 + meses * 30 + dias;
         System.out.println("A idade em dias é: " + idadeEmDias + " dias");
