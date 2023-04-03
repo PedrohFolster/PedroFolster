@@ -18,6 +18,5 @@ public class ParOuImpar {
         } else {
             System.out.println("O número digitado é ímpar!");
         }
-
     }
 }
