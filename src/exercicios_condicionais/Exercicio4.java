@@ -17,16 +17,17 @@ public class Exercicio4 {
         int valorPorHoraTrabalhada = scan.nextInt();
 
         int salarioFinal = valorPorHoraTrabalhada * totalHorasTrabalhadas;
-        int horaExtra = (int) (horasSemanais * 0.05);
+        int houveHoraExtra = (totalHorasTrabalhadas - horasSemanais);
+        double salarioComHoraExtra = houveHoraExtra * 1.5;
+        double salarioFinalComHoraExtra = salarioComHoraExtra + salarioFinal;
 
         if (totalHorasTrabalhadas > horasSemanais) {
             System.out.println("O funcionário trabalhou por mais horas, portanto fez hora extra.");
-            int valorComHoraExtra = (totalHorasTrabalhadas * horaExtra);
-            System.out.println("O funcionário trabalhou por: " + totalHorasTrabalhadas + " horas, e recebeu um total de R$ " + valorComHoraExtra + " reais.");
+            System.out.println("O funcionário trabalhou por: " + totalHorasTrabalhadas + " horas, e recebeu um total de R$ " + salarioFinalComHoraExtra + " reais.");
 
         } else {
             System.out.println("O funcionário não teve acrescimo nas horas, portanto trabalhou 40 horas semanais.");
-            System.out.println("O funcionário trabalhou por: " + totalHorasTrabalhadas + " e recebeu um total de R$ " +salarioFinal + " reais.");
+            System.out.println("O funcionário trabalhou por: " + totalHorasTrabalhadas + " e recebeu um total de R$ " + salarioFinal + " reais.");
         }
     }
 }
