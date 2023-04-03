@@ -12,7 +12,7 @@ public class LucasAndCaruso {
 
         System.out.println("Escolha uma das opções abaixo: ");
         System.out.println("1 - Lucas\n" +
-                            "2 - Caruso");
+                "2 - Caruso");
 
         nomes = scan.nextInt();
         switch (nomes) {
