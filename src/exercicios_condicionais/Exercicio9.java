@@ -86,19 +86,22 @@ public class Exercicio9 {
                 int somaDosKg = kgMaca + kgMorango;
 
                 if (somaDosKg > 8) {
-                    System.out.println("Você recebeu um desconto de 10% por estar comprando mais de 8KG em frutas.");
-                    System.out.println("Você stá comprando um total de " + somaDosKg + " de frutas. " + "Desses " + somaDosKg + " " + kgMaca + " são de maça e " + kgMorango + " de morango.");
                     double precoMorangoAcimaDe5Kg = 2.2;
                     double precoMacaAbaixoDe5kg = 1.8;
                     double precoMacaAcimaDe5Kg = 1.5;
                     double precoMorangoAbaixoDe5kg = 2.5;
+                    System.out.println("Você recebeu um desconto de 10% por estar comprando mais de 8KG em frutas.");
+                    System.out.println("Você está comprando um total de " + somaDosKg + "kg de frutas. " + "Desses " + somaDosKg + "kg, " + kgMaca + "kg são de maça e " + kgMorango + "kg de morango.");
+                    System.out.println("O valor total gasto foi de: ");
                 }
                 if (kgMaca > 5) {
-                    System.out.println("Você está comprando o Kg da maça por R$ 1.50");
-                    double precoMacaAcimaDe5Kg = 1.5;
-                    double valorTotal = (precoMacaAcimaDe5Kg * kgMaca);
-                    double valorDesconto = (precoMacaAcimaDe5Kg * kgMaca) * (0.1);
-                    System.out.println("O valor total da sua compra foi de: " + (valorTotal - valorDesconto));
+                    if (somaDosKg <= 8) {
+                        System.out.println("Você está comprando o Kg da maça por R$ 1.50");
+                        double precoMacaAcimaDe5Kg = 1.5;
+                        double valorTotal = (precoMacaAcimaDe5Kg * kgMaca);
+                        double valorDesconto = (precoMacaAcimaDe5Kg * kgMaca) * (0.1);
+                        System.out.println("O valor total da sua compra foi de: " + (valorTotal - valorDesconto));
+                    }
                 } else {
                     double precoMacaAbaixoDe5kg = 1.8;
                     System.out.println("Você está comprando o Kg da maça por R$ " + precoMacaAbaixoDe5kg + ".");
