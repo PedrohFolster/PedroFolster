@@ -22,15 +22,11 @@ public class Exercicio3 {
 
         int totalHoras = (horaFinal - horaInicio);
 
-        if (dias > 1) {
-            System.out.println("O jogo não pode durar mais de um dia!");
+        if (dias >= 1 || totalHoras > 24) {
+            System.out.println("O jogo não pode durar mais de um dia, portanto foi considerado invalido!");
         } else {
             System.out.println("O jogo foi considerado válido, visto que durou menos de um dia!");
-        }
-        if (totalHoras < 24) {
-            System.out.println("O jogo durou menos que 24 horas, portanto é válido! O jogo durou: " + totalHoras);
-        } else {
-            System.out.println("O jogo durou mais do que 24 horas, portanto não foi validado! O jogo durou: " + totalHoras);
+            System.out.println("Tempo total de jogo: " + totalHoras + " horas.");
         }
     }
 }
