@@ -58,15 +58,12 @@ public class Exercicio9 {
                 kgMorango = scan.nextInt();
 
                 int somaDosKg = kgMaca + kgMorango;
-                double valorTotalAmbas = 0.0;
+                double valorTotalAmbas = ((kgMaca > 5) ? (1.5 * kgMaca) : (1.8 * kgMaca)) + ((kgMorango > 5) ? (2.2 * kgMorango) : (2.5 * kgMorango));
                 if (somaDosKg > 8 || valorTotalAmbas > 25.0) {
-                    valorTotalAmbas = ((kgMaca > 5) ? (1.5 * kgMaca) : (1.8 * kgMaca)) + ((kgMorango > 5) ? (2.2 * kgMorango) : (2.5 * kgMorango));
                     valorTotalAmbas *= 0.9;
                     System.out.println("Você recebeu um desconto de 10% por estar comprando mais de 8KG em frutas ou mais que R$ 25,00");
                     System.out.println("Valor total da compra: " + valorTotalAmbas);
-                }
-                if (somaDosKg < 8 || valorTotalAmbas < 25.0) {
-                    valorTotalAmbas = ((kgMaca > 5) ? (1.5 * kgMaca) : (1.8 * kgMaca)) + ((kgMorango > 5) ? (2.2 * kgMorango) : (2.5 * kgMorango));
+                } else {
                     System.out.println("Para receber um desconto de 10%, você precisa estar comprando mais de 8KG em frutas ou mais que R$ 25,00");
                     System.out.println("Valor total da compra: " + valorTotalAmbas);
                 }
