@@ -1,24 +1,24 @@
 package exercicios_condicionais.extras;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Exercicio3 {
-
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
 
         int ano;
 
-        System.out.println("Insira o ano para descobrir se é ano bissexto: ");
+        System.out.println("Insira um ano para verificar se é bissexto: ");
         ano = scan.nextInt();
 
-        if (ano % 4 == 0) {
-            System.out.println(ano + " é um ano bissexto!");
+        Calendar calendario = Calendar.getInstance();
+        calendario.set(Calendar.YEAR, ano);
+        if (calendario.getActualMaximum(Calendar.DAY_OF_YEAR) > 365) {
+            System.out.println(ano + "é um ano bissexto!");
         } else {
-            System.out.println(ano + " não é um ano bissexto!");
+            System.out.println("Não é um ano bissexto!");
         }
-
     }
 }
-
