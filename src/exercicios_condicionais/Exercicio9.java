@@ -33,7 +33,7 @@ public class Exercicio9 {
                 }
                 if (kgMaca > 8 || valorTotalMaca > 25.0) {
                     valorTotalMaca *= 0.9;
-                    System.out.println("Você está comprando mais de 8Kg de Morango ou então comprando acima de R$ 25,00, por isso estará recebendo um desconto de 10%.");
+                    System.out.println("Você está comprando mais de 8Kg de Maça ou então comprando acima de R$ 25,00, por isso estará recebendo um desconto de 10%.");
                 }
                 System.out.println("O valor total da sua compra foi de: " + valorTotalMaca);
                 break;
