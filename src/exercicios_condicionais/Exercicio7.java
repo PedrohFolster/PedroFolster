@@ -24,13 +24,14 @@ public class Exercicio7 {
                 System.out.println("Quantos litros de gasolina você deseja colocar? ");
                double litrosGasolina = scan.nextDouble();
                 if (litrosGasolina > 20) {
-                    double maiorDe20L = (precoLitrosGasolina * litrosGasolina) - (0.05);
-                    System.out.println("Você irá ganhar um desconto de 5% por colocar mais de 20L de Galosina.");
+                    double maiorDe20L = (precoLitrosGasolina * litrosGasolina) * (0.94);
+                    System.out.println("Você irá ganhar um desconto de 6% por colocar mais de 20L de Galosina.");
                     System.out.println("Você irá pagar " + maiorDe20L + " reais.");
                 } else {
-                    double menorDe20L = (precoLitrosGasolina * litrosGasolina) - (0.03);
-                    System.out.println("Você irá ganhar um desconto de 3%.");
+                    double menorDe20L = (precoLitrosGasolina * litrosGasolina) * (0.96);
+                    System.out.println("Você irá ganhar um desconto de 4%.");
                     System.out.println("Você irá pagar " + menorDe20L + " reais.");
+                    break;
                 }
             }
             case "A": {
@@ -39,14 +40,18 @@ public class Exercicio7 {
                 double litrosAlcool = scan.nextDouble();
 
                 if (litrosAlcool > 20) {
-                    double maiorDe20L = (precoLitrosAlcool * litrosAlcool) - (0.06);
+                    double maiorDe20L = (precoLitrosAlcool * litrosAlcool) * (0.95);
                     System.out.println("Você irá ganhar um desconto de 5% por colocar mais de 20L de Alcool.");
                     System.out.println("Você irá pagar " + maiorDe20L + " reais.");
                 } else {
-                    double menorDe20L = (precoLitrosAlcool * litrosAlcool) - (0.04);
-                    System.out.println("Você irá ganhar um desconto de 4%.");
+                    double menorDe20L = (precoLitrosAlcool * litrosAlcool) * (0.97);
+                    System.out.println("Você irá ganhar um desconto de 3%.");
                     System.out.println("Você irá pagar " + menorDe20L + " reais.");
+                    break;
                 }
+            }
+            default: {
+                System.out.println("Opção não existe!");
             }
         }
     }
