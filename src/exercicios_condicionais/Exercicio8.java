@@ -13,27 +13,17 @@ public class Exercicio8 {
         int informeUsuario;
         int senha;
 
-        System.out.println("informe o usuario");
+        System.out.println("Insira o seu usuário: ");
         informeUsuario = scan.nextInt();
 
-        if (informeUsuario == usuario) {
-            System.out.println("usuario correta");
-            System.out.println("informe a senha");
-            senha = scan.nextInt();
+        System.out.println("Informe sua senha: ");
+        senha = scan.nextInt();
 
-            if (codigo == senha) {
-                System.out.println("senha correta");
-                System.out.println("acesso permitido");
-
-            } else {
-                System.out.println("senha incorreto");
-                System.out.println("acesso negado");
-            }
+        if (usuario == informeUsuario && senha == codigo) {
+            System.out.println("Usuario correto!");
+            System.out.println("Senha correta!");
         } else {
-            System.out.println("usuario incorreto");
-            System.out.println("acesso negado");
+            System.out.println("Suas credenciais estão incorretas!");
         }
-
-
     }
 }
