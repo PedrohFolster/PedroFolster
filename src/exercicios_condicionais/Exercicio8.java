@@ -13,15 +13,18 @@ public class Exercicio8 {
         int informeUsuario;
         int senha;
 
-        System.out.println("Insira o seu usuário: ");
+        System.out.print("Insira o seu usuário: ");
         informeUsuario = scan.nextInt();
 
-        System.out.println("Informe sua senha: ");
+        System.out.print("Informe sua senha: ");
         senha = scan.nextInt();
 
         if (usuario == informeUsuario && senha == codigo) {
-            System.out.println("Usuario correto!");
+            System.out.println("\nUsuario correto!");
             System.out.println("Senha correta!");
+
+        } else if (usuario == informeUsuario && senha != codigo) {
+            System.out.println("Senha incorreta, verifique suas credenciais!");
         } else {
             System.out.println("Suas credenciais estão incorretas!");
         }
