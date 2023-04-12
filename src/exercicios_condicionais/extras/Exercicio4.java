@@ -34,6 +34,9 @@ public class Exercicio4 {
                 System.out.println("O seu peso ideial seria de: " + pesoIdeal);
                 break;
             }
+            default: {
+                System.out.println("Insira um valor válido!");
+            }
         }
     }
 }
