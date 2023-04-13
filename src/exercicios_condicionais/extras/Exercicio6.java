@@ -8,7 +8,7 @@ public class Exercicio6 {
 
         Scanner scan = new Scanner(System.in);
 
-        int confirmcoes = 0;
+        int confirmacoes = 0;
 
         System.out.println("Responda as seguintes perguntas abaixo.");
 
@@ -27,29 +27,29 @@ public class Exercicio6 {
         System.out.println("5 - Você esteve no local do crime? Responda (s/n)");
         String resposta5 = scan.nextLine();
 
-        if (resposta1.equals("s")) {
-            confirmcoes++;
+        if (resposta1.equalsIgnoreCase("s")) {
+            confirmacoes++;
         }
-        if (resposta2.equals("s")) {
-            confirmcoes++;
+        if (resposta2.equalsIgnoreCase("s")) {
+            confirmacoes++;
         }
-        if (resposta3.equals("s")) {
-            confirmcoes++;
+        if (resposta3.equalsIgnoreCase("s")) {
+            confirmacoes++;
         }
-        if (resposta4.equals("s")) {
-            confirmcoes++;
+        if (resposta4.equalsIgnoreCase("s")) {
+            confirmacoes++;
         }
-        if (resposta5.equals("s")) {
-            confirmcoes++;
+        if (resposta5.equalsIgnoreCase("s")) {
+            confirmacoes++;
         }
 
         System.out.println("Classificação.");
 
-        if (confirmcoes == 0 || confirmcoes == 1) {
+        if (confirmacoes == 0 || confirmacoes == 1) {
             System.out.println("Você foi considerado inocente!");
-        } else if (confirmcoes == 2) {
+        } else if (confirmacoes == 2) {
             System.out.println("Você foi considerado suspeito!");
-        } else if (confirmcoes >= 3 && confirmcoes <= 4) {
+        } else if (confirmacoes >= 3 && confirmacoes <= 4) {
             System.out.println("Você foi considerado cúmplice!");
         } else {
             System.out.println("Você foi considerado culpado!");
