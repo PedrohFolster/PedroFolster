@@ -8,12 +8,30 @@ public class UsandoFor {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Insira seu nome: ");
-        String name = scan.nextLine();
+        int mediaComparacoes;
+        String nome;
+        double nota1, nota2, media;
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("O " + name + " é um(a) otário(a) !!!!");
+        System.out.print("Insira quantas vezes você deseja obter essas médias: ");
+        mediaComparacoes = scan.nextInt();
 
+        for (int contador = 1; contador <= mediaComparacoes; contador ++) {
+
+            System.out.print("\nAluno " + contador + "\nInsira seu nome: ");
+            nome = scan.next();
+            scan.nextLine();
+
+            System.out.print("Insira a nota da primeira avaliação: ");
+            nota1 = scan.nextDouble();
+
+            System.out.print("Insira a nota da segunda avaliação: ");
+            nota2 = scan.nextDouble();
+
+            media = (nota1 + nota2) / 2;
+            System.out.println(nome + ", sua média é de: " + media);
+
+            contador ++;
+            scan.nextLine();
         }
     }
 }
