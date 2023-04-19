@@ -16,8 +16,9 @@ public class Exercicio4 {
             System.out.println("Escreva o " + i + "º número: ");
             int numero = scan.nextInt();
 
-            soma += i;
+            soma += numero;
         }
+        System.out.println(soma);
         System.out.println("A média é de: " + (soma / 10));
 
     }
