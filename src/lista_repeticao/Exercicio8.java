@@ -14,13 +14,15 @@ public class Exercicio8 {
         int contador = 0;
         String alternativa;
 
-        System.out.print("Informe a quantidade de mercadorias que você tem em estoque: ");
-        mercadoriasEmEstoque = scan.nextInt();
-        scan.nextLine();
 
         do {
+            System.out.print("Informe a quantidade de mercadorias que você tem em estoque: ");
+            mercadoriasEmEstoque = scan.nextInt();
+            scan.nextLine();
+
             for (int i = 1; i <= mercadoriasEmEstoque; i++) {
-                System.out.print("Digite o preço da " + i + "º mercadoria:");
+                contador++;
+                System.out.print("Digite o preço da " + contador + "º mercadoria:");
                 precoMercadorias = scan.nextDouble();
 
                 valorTotal += precoMercadorias;
@@ -33,23 +35,13 @@ public class Exercicio8 {
             alternativa = scan.next();
 
             if (alternativa.equalsIgnoreCase("N")) {
-                System.out.println("Você teve " + mercadoriasEmEstoque + " mercadorias!");
                 double mediaValorMercadoria = valorTotal / mercadoriasEmEstoque;
 
-                System.out.println("Você possuí " + mercadoriasEmEstoque + " mercadorias em estoque!");
+                System.out.println("Você possuí " + contador + " mercadorias em estoque!");
                 System.out.println("Valor total em estoque é de: " + valorTotal);
                 System.out.println("Média dos valores em estoque: " + mediaValorMercadoria);
                 break;
             }
-
-            double mediaValorMercadoria = valorTotal / mercadoriasEmEstoque;
-
-            System.out.println("Você possuí " + mercadoriasEmEstoque + " mercadorias em estoque!");
-            System.out.println("Valor total em estoque é de: " + valorTotal);
-            System.out.println("Média dos valores em estoque: " + mediaValorMercadoria);
-            contador++;
-
-        } while (mercadoriasEmEstoque > contador);
-
+        } while (mercadoriasEmEstoque > contador || alternativa.equalsIgnoreCase("S"));
     }
 }
