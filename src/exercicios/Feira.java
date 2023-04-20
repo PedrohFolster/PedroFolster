@@ -12,13 +12,13 @@ public class Feira {
         double quiloLaranja;
         double precoLaranja;
 
-        System.out.println("Quantidade de quilos de Maça: ");
+        System.out.println("numerosInformados de quilos de Maça: ");
         quiloMaca = scan.nextDouble();
 
         System.out.println("Valor do preço do quilo da maça: ");
         precoMaca = scan.nextDouble();
 
-        System.out.println("Quantidade de quilos de Laranja: ");
+        System.out.println("numerosInformados de quilos de Laranja: ");
         quiloLaranja = scan.nextDouble();
 
         System.out.println("Valor do preço do quilo da laranja: ");

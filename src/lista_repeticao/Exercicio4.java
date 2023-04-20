@@ -18,7 +18,6 @@ public class Exercicio4 {
 
             soma += numero;
         }
-        System.out.println(soma);
         System.out.println("A média é de: " + (soma / 10));
 
     }

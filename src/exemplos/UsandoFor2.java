@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class UsandoFor2 {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         int impar = 0, par = 0;
 
         for (int i = 1; i <= 50; i++) {
             System.out.print("Digite o " + i + "º número: ");
-            int numero = input.nextInt();
+            int numero = scan.nextInt();
 
             if (numero % 2 == 0) {
                 System.out.println(numero + " é par");
