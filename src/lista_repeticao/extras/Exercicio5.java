@@ -25,35 +25,39 @@ public class Exercicio5 {
         System.out.print("Insira o valor gasto em saúde no mês: ");
         valorGastoSaude = scan.nextDouble();
 
-        if (valorGastoAlimentacao > maisGasto || valorGastoCombustivel > maisGasto || valorGastoSaude > maisGasto) {
-            maisGasto = Math.max(valorGastoAlimentacao, Math.max(valorGastoCombustivel, valorGastoSaude));
+        if (valorGastoAlimentacao == valorGastoCombustivel && valorGastoCombustivel == valorGastoSaude) {
+            System.out.println("Os gastos foram iguais.");
+        } else {
+            if (valorGastoAlimentacao > maisGasto || valorGastoCombustivel > maisGasto || valorGastoSaude > maisGasto) {
+                maisGasto = Math.max(valorGastoAlimentacao, Math.max(valorGastoCombustivel, valorGastoSaude));
 
-            if (maisGasto == valorGastoAlimentacao) {
-                categoriaMaisGasto = "alimentação";
-            } else if (maisGasto == valorGastoCombustivel) {
-                categoriaMaisGasto = "combustível";
-            } else {
-                categoriaMaisGasto = "saúde";
+                if (maisGasto == valorGastoAlimentacao) {
+                    categoriaMaisGasto = "alimentação";
+                } else if (maisGasto == valorGastoCombustivel) {
+                    categoriaMaisGasto = "combustível";
+                } else {
+                    categoriaMaisGasto = "saúde";
+                }
             }
-        }
 
-        if (valorGastoAlimentacao < menosGasto || valorGastoCombustivel < menosGasto || valorGastoSaude < menosGasto) {
-            menosGasto = Math.min(valorGastoAlimentacao, Math.min(valorGastoCombustivel, valorGastoSaude));
+            if (valorGastoAlimentacao < menosGasto || valorGastoCombustivel < menosGasto || valorGastoSaude < menosGasto) {
+                menosGasto = Math.min(valorGastoAlimentacao, Math.min(valorGastoCombustivel, valorGastoSaude));
 
-            if (menosGasto == valorGastoAlimentacao) {
-                categoriaMenosGasto = "alimentação";
-            } else if (menosGasto == valorGastoCombustivel) {
-                categoriaMenosGasto = "combustível";
-            } else {
-                categoriaMenosGasto = "saúde";
+                if (menosGasto == valorGastoAlimentacao) {
+                    categoriaMenosGasto = "alimentação";
+                } else if (menosGasto == valorGastoCombustivel) {
+                    categoriaMenosGasto = "combustível";
+                } else {
+                    categoriaMenosGasto = "saúde";
+                }
             }
+
+            double valorTotal = valorGastoAlimentacao + valorGastoCombustivel + valorGastoSaude;
+
+            System.out.println();
+            System.out.println("Valor total gasto foi de: " + valorTotal);
+            System.out.println("Categoria com maior gasto: " + categoriaMaisGasto);
+            System.out.println("Categoria com menor gasto: " + categoriaMenosGasto);
         }
-
-        double valorTotal = valorGastoAlimentacao + valorGastoCombustivel + valorGastoSaude;
-
-        System.out.println();
-        System.out.println("Valor total gasto foi de: " + valorTotal);
-        System.out.println("Categoria com maior gasto: " + categoriaMaisGasto);
-        System.out.println("Categoria com menor gasto: " + categoriaMenosGasto);
     }
 }
