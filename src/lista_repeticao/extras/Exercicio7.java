@@ -10,7 +10,7 @@ public class Exercicio7 {
 
         int aeronaves;
         double distancia, combustivel, consumo, menorConsumo = Double.NEGATIVE_INFINITY;
-        String modeloMaisEconomica = null;
+        String modeloMaisEconomica = "";
 
         System.out.print("Quantas aeronaves você deseja comparar? ");
         aeronaves = scan.nextInt();

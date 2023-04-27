@@ -26,7 +26,7 @@ public class Exercicio3 {
 
             somaMinutos += minutos;
         }
-        double resultadoMedia = minutos / distancia;
+        double resultadoMedia = somaDistancia / somaMinutos;
 
         System.out.println();
         System.out.println("A média da sua velocidade nas cinco provas foi de: " + resultadoMedia + " metros por segundo (m/s).");
@@ -34,7 +34,7 @@ public class Exercicio3 {
         System.out.print("Informe a distância da prova que você irá participar: ");
         distanciaProxima = scan.nextDouble();
 
-        double resultadoProxima = resultadoMedia * distanciaProxima;
-        System.out.println("Com base nas informações fornecidas, você irá terminar a sua próxima prova em: " + resultadoProxima + " segundos.");
+        double resultadoProxima = distanciaProxima / resultadoMedia;
+        System.out.println("Com base nas informações fornecidas, você irá terminar a sua próxima prova em: " + resultadoProxima + " minutos.");
     }
 }
