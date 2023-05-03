@@ -1,4 +1,4 @@
-package treinoProva.extras;
+package treinoProva.repeticao_extras;
 
 import java.util.Scanner;
 
