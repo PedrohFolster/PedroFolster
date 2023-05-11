@@ -16,7 +16,11 @@ public class Exercicio1 {
         quantidade = scan.nextInt();
 
         if (quantidade >= 12) {
-            System.out.println("Valor total: " );
+            double totalMais12 = quantidade * macaMais12;
+            System.out.println("Valor total: " + totalMais12);
+        } else if (quantidade < 12) {
+            double totalMenos12 = quantidade * maca;
+            System.out.println("Valor total: " + totalMenos12);
         }
     }
 }
