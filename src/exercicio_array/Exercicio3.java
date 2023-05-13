@@ -1,8 +1,8 @@
-package exemplos;
+package exercicio_array;
 
 import java.util.Scanner;
 
-public class array4 {
+public class Exercicio3 {
 
     public static void main(String[] args) {
 
