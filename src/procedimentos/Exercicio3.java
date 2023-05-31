@@ -5,48 +5,51 @@ import java.util.Scanner;
 public class Exercicio3 {
 
     public static void main(String[] args) {
-        double[] notas = new double[3];
 
         Scanner scan = new Scanner(System.in);
 
+        double[] notas = new double[3];
+        double totalNotas = 0;
+        int escolha;
+
         for (int i = 0; i < notas.length; i++) {
-            System.out.print("Informe a nota " + (i + 1) + ": ");
+            System.out.print("Informe sua " + (i + 1) + "° nota: ");
             notas[i] = scan.nextDouble();
+
+            totalNotas += notas[i];
         }
 
-        System.out.print("Informe o tipo de cálculo (1 - Média Aritmética, 2 - Média Ponderada): ");
-        int tipoCalculo = scan.nextInt();
+        System.out.println();
+        System.out.println("Agora escolha qual das opções abaixo você deseja obter: \n" +
+                "1 - Média Aritmética\n" +
+                "2 - Média Ponderada");
 
-        if (tipoCalculo == 1) {
-            calcularMediaAritmetica(notas);
-        } else if (tipoCalculo == 2) {
-            calcularMediaPonderada(notas);
+        escolha = scan.nextInt();
+        System.out.println();
+
+        if (escolha == 1) {
+            System.out.println("Sua média aritmética é: " + mediaAritmetica(notas));
+        } else if (escolha == 2) {
+            System.out.println("Sua média ponderada é: " + mediaPonderada(notas));
         } else {
-            System.out.println("Tipo de cálculo inválido. Escolha 1 para Média Aritmética ou 2 para Média Ponderada.");
+            System.out.println("Erro! Digite um valor válido!");
         }
     }
 
-    public static void calcularMediaAritmetica(double[] notas) {
-        double soma = 0;
+    public static double mediaPonderada(double[] notas) {
+        double nota1 = notas[0];
+        double nota2 = notas[1];
+        double nota3 = notas[2];
 
+        return (nota1 * 5 + nota2 * 3 + nota3 * 2) / 10;
+    }
+
+    public static double mediaAritmetica(double[] notas) {
+        double totalNotas = 0;
         for (double nota : notas) {
-            soma += nota;
+            totalNotas += nota;
         }
 
-        double media = soma / notas.length;
-        System.out.println("Média Aritmética: " + media);
-    }
-
-    public static void calcularMediaPonderada(double[] notas) {
-        if (notas.length != 3) {
-            System.out.println("É necessário ter exatamente 3 notas para o cálculo da Média Ponderada.");
-            return;
-        }
-
-        double somaPonderada = (notas[0] * 5) + (notas[1] * 3) + (notas[2] * 2);
-        double pesoTotal = 5 + 3 + 2;
-        double media = somaPonderada / pesoTotal;
-
-        System.out.println("Média Ponderada: " + media);
+        return totalNotas / notas.length;
     }
 }
