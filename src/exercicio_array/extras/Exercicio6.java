@@ -12,7 +12,6 @@ public class Exercicio6 {
         double [] altura = new double[10];
         double totalAltura = 0;
         double mediaAltura = 0;
-        double [] alturasAbaixoDaMedia = new double[10];
         int counter = 0;
 
         for (int i = 0; i < altura.length; i++) {
