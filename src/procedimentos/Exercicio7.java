@@ -8,16 +8,28 @@ public class Exercicio7 {
 
         Scanner scan = new Scanner(System.in);
 
-        int numero = verificarPrimo(numero);
+        int numero;
 
-        System.out.print("Informe um número para descobrir se o mesmo é primo: ");
+        System.out.print("Informe um número para verificar se o mesmo é primo ou não: ");
         numero = scan.nextInt();
 
-
+        if (verificarPrimo(numero)) {
+            System.out.println("O número " + numero + " é um número primo!");
+        } else {
+            System.out.println("O número " + numero + " não é um número primo!");
+        }
     }
 
     private static boolean verificarPrimo(int numero) {
 
+        System.out.println();
 
+        if (numero <= 1) {
+            return false;
+        } else if (numero % 2 == 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
