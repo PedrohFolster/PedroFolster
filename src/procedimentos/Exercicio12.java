@@ -11,17 +11,11 @@ public class Exercicio12 {
         int escolha;
         String novamente;
         double[] numero = new double[2];
-        double totalNumero = 0;
-
 
         do {
-
-
             for (int i = 0; i < numero.length; i++) {
                 System.out.print("Informe o " + (i + 1) + "° número: ");
                 numero[i] = scan.nextDouble();
-
-                totalNumero += numero[i];
             }
 
             System.out.println();
@@ -34,13 +28,13 @@ public class Exercicio12 {
             escolha = scan.nextInt();
 
             if (escolha == 1) {
-                System.out.println("A adição dos números informados acima foi de: " + realizarAdicao(numero, totalNumero));
+                System.out.println("A adição dos números informados acima foi de: " + realizarAdicao(numero));
             } else if (escolha == 2) {
-                System.out.println("A subtração dos números informados acima foi de: " + realizarSubtracao(numero, totalNumero));
+                System.out.println("A subtração dos números informados acima foi de: " + realizarSubtracao(numero));
             } else if (escolha == 3) {
-                System.out.println("A multiplicação dos números informados acima foi de: " + realizarMultiplicacao(numero, totalNumero));
+                System.out.println("A multiplicação dos números informados acima foi de: " + realizarMultiplicacao(numero));
             } else if (escolha == 4) {
-                System.out.println("A divisão dos números informados acima foi de: " + realizarDivisao(numero, totalNumero));
+                System.out.println("A divisão dos números informados acima foi de: " + realizarDivisao(numero));
             }
 
             System.out.println();
@@ -56,31 +50,29 @@ public class Exercicio12 {
         } while (novamente.equalsIgnoreCase("S"));
     }
 
-    private static double realizarDivisao(double[] numero, double totalNumero) {
+    private static double realizarDivisao(double[] numero) {
         System.out.println();
-        for (int i = 0; i < numero.length; i++) {
-            if (numero[i] <= 0) {
+            if (numero[1] <= 0) {
                 System.out.println("Erro, você deve informar um número maior que Zero.");
+                return 0;
             } else {
                 return numero[0] / numero[1];
             }
-        }
-        return numero[0] / numero[1];
     }
 
-    private static double realizarMultiplicacao(double[] numero, double totalNumero) {
+    private static double realizarMultiplicacao(double[] numero) {
         System.out.println();
         return numero[0] * numero[1];
     }
 
-    private static double realizarSubtracao(double[] numero, double totalNumero) {
+    private static double realizarSubtracao(double[] numero) {
         System.out.println();
         return numero[0] - numero[1];
     }
 
-    private static double realizarAdicao(double[] numero, double totalNumero) {
+    private static double realizarAdicao(double[] numero) {
         System.out.println();
-        return totalNumero;
+        return numero[0] + numero[1];
     }
 
 }
