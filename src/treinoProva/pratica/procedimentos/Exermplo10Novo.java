@@ -8,23 +8,21 @@ public class Exermplo10Novo {
 
         Scanner scan = new Scanner(System.in);
 
-        String [] extenso = {"ZERO", "UM", "DOIS", "TRÊS", "QUATRO", "CINCO", "SEIS", "SETE", "OITO", "NOVE"};
+        String[] extenso = {"ZERO", "UM", "DOIS", "TRÊS", "QUATRO", "CINCO", "SEIS", "SETE", "OITO", "NOVE"};
         int numero;
 
         System.out.print("Informe o número para obter o mesmo por extenso: ");
         numero = scan.nextInt();
 
-        String numeroString = String.valueOf(numero);
+        String numeroExtenso = String.valueOf(numero);
 
-        for (int i = 0; i < numeroString.length(); i++) {
-            int digito = numeroString.charAt(i) - '0';
-
+        for (int i = 0; i < numeroExtenso.length(); i++) {
+            int digito = numeroExtenso.charAt(i) - '0';
             System.out.print(extenso[digito]);
 
-            if (i < numeroString.length() - 1) {
+            if (i < numeroExtenso.length() - 1) {
                 System.out.print(", ");
             }
         }
-        System.out.println();
     }
 }

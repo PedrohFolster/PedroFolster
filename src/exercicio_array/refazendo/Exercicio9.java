@@ -1,5 +1,6 @@
 package exercicio_array.refazendo;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exercicio9 {
