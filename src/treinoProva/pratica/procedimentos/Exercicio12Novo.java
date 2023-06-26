@@ -22,7 +22,7 @@ public class Exercicio12Novo {
             System.out.print(" ");
         }
 
-        System.out.print(separar[separar.length - 2]);
-        System.out.println(".");
+        System.out.println(separar[separar.length - 2] + ".");
+
     }
 }
