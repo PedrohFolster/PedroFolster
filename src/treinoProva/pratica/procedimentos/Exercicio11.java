@@ -8,7 +8,7 @@ public class Exercicio11 {
 
         Scanner scan = new Scanner(System.in);
 
-        String [] numeroPorExtenso = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        String [] numeroPorExtenso = {"","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
         int dia, mes, ano;
 
         System.out.print("Informe o dia do seu nascimento: ");
